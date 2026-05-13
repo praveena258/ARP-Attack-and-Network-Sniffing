@@ -25,6 +25,7 @@ Boot kali and Windows7 virtual machines.
 In windows 7 give the command arp -a
 ## OUTPUT:
 
+<img width="1205" height="709" alt="image" src="https://github.com/user-attachments/assets/9622f8d7-031c-4893-a79a-1cf0216a6b51" />
 
 From kali linux issue the command :
 sudo arpspoof -i eth0 -t <target system> <gateway>
