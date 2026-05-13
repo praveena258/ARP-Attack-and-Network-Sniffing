@@ -58,7 +58,9 @@ Invoke the wireshark and examine the various menus  and controls of the tool:
 <img width="920" height="1030" alt="image" src="https://github.com/user-attachments/assets/69455035-c734-41a8-bca6-4b74b11a0d6d" />
 
 
-ARP SPOOFING
+
+
+# ARP SPOOFING
 
 <img width="866" height="897" alt="Screenshot 2026-05-12 202829" src="https://github.com/user-attachments/assets/b6436163-4ef2-4260-b1e1-5bde70008c15" />
 <img width="627" height="727" alt="Screenshot 2026-05-13 093824" src="https://github.com/user-attachments/assets/c1f47afc-edd5-4052-959b-d79e24ef7643" />
