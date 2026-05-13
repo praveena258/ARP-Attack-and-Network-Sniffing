@@ -26,9 +26,36 @@ In windows 7 give the command arp -a
 ## OUTPUT:
 
 <img width="1205" height="709" alt="image" src="https://github.com/user-attachments/assets/9622f8d7-031c-4893-a79a-1cf0216a6b51" />
+Purpose:
+
+Displays the ARP (Address Resolution Protocol) table/cache of your machine.
+
+What ARP table contains:
+
+Mapping between:
+IP Address → MAC Address
 
 From kali linux issue the command :
 sudo arpspoof -i eth0 -t <target system> <gateway>
+
+Explanation part by part:
+
+sudo
+Runs the command with administrator (root) privileges.
+Needed because network packet manipulation requires elevated permissions.
+arpspoof
+A tool used to send fake ARP (Address Resolution Protocol) messages on a local network.
+Commonly used in authorized network security labs to demonstrate ARP poisoning / man-in-the-middle concepts.
+-i eth0
+-i means interface.
+eth0 is the network interface (network adapter) being used.
+So the attack packets are sent through eth0.
+-t <target_ip>
+-t means target.
+Specifies the victim machine’s IP address.
+<gateway_ip>
+Usually the router/default gateway IP.
+The command tells the victim that the attacker’s MAC address belongs to this gateway IP.
 ## OUTPUT:
 
 
@@ -37,7 +64,27 @@ sudo arpspoof -i eth0 -t <target system> <gateway>
 <img width="353" height="128" alt="Screenshot 2026-05-12 200712" src="https://github.com/user-attachments/assets/feec4610-4a3c-41dd-8ca9-7e62a8daf7b6" />
 
 
+Meaning:
 
+dsniff is a network packet sniffing tool.
+
+Purpose:
+
+Captures and analyzes network traffic on a local network.
+Commonly used in authorized security labs to observe unencrypted traffic.
+
+What it can do:
+
+Monitor packets passing through the network
+Extract readable data from insecure protocols such as:
+HTTP
+FTP
+Telnet
+POP3
+IMAP
+
+Example:
+If a machine sends plain-text login credentials over HTTP/FTP, dsniff may display that data because it is unencrypted.
 
 
 In Metasploit open the ftp console as below. Also you can try other ftp websites ftp.vim.org
@@ -53,6 +100,23 @@ sudo dsnifff
 <img width="920" height="1030" alt="VirtualBox_kali_12_05_2026_19_50_51" src="https://github.com/user-attachments/assets/fe6fbb23-e143-4843-b363-6e22f9f22559" />
 
 
+Explanation:
+
+sudo
+Runs the command with administrator/root privileges.
+Needed because capturing network packets requires elevated permissions.
+dsniff
+Starts the packet sniffing tool.
+Listens to network traffic and tries to extract readable information from unencrypted protocols.
+
+What happens:
+
+The tool begins monitoring packets on the default network interface (or a specified one if you use -i).
+It may display information such as:
+HTTP data
+FTP usernames/passwords
+Telnet sessions
+Other plain-text network traffic
 
 Invoke the wireshark and examine the various menus  and controls of the tool:
 <img width="920" height="1030" alt="image" src="https://github.com/user-attachments/assets/69455035-c734-41a8-bca6-4b74b11a0d6d" />
